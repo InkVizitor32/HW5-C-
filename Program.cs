@@ -96,46 +96,46 @@
                                         //             Найдите разницу между максимальным и минимальным элементов массива.
 
 
-// Console.Clear();
+Console.Clear();
 
-// double[] CreateFillArray()
-// {
-//     double[] array = new double[5];
-//     Random a = new Random();   //экземпляр генератора случайных чисел
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         array[i] = a.Next(-100, 100) + a.NextDouble();
-//         Console.Write($"   {array[i]}");
+double[] CreateFillArray()
+{
+    double[] array = new double[5];
+    Random a = new Random();   //экземпляр генератора случайных чисел
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = a.Next(-100, 100) + a.NextDouble();
+        Console.Write("{0,6:F2}  ",   array[i]);     // "{0,6:F2}  " ---вывод двух знаков после запятой
 
-//     }
-//     return array;
-// }
+    }
+    return array;
+}
 
 
-// void FindCount (double[] array)
-// {
-//     int index = 0;
-//     double max = array[index];
-//     double min = array[index];
+void FindCount (double[] array)
+{
+    int index = 0;
+    double max = array[index];
+    double min = array[index];
 
-//     foreach ( double el in array) 
-//     {
-//         if ( el>max) max =  el;
-//         if ( el<min) min =  el;
+    foreach ( double el in array) 
+    {
+        if ( el>max) max =  el;
+        if ( el<min) min =  el;
         
      
-//     }
-//      Console.WriteLine($" Максимальный элемент: {max}");
-//      Console.WriteLine($" Минимальный элемент: {min}");
-//      Console.WriteLine($"Разница между максимальным и минимальным элементом: {max-min}");
+    }
+     Console.WriteLine($" Максимальный элемент: {max}");
+     Console.WriteLine($" Минимальный элемент: {min}");
+     Console.WriteLine($"Разница между максимальным и минимальным элементом: {max-min}");
 
-// }
+}
 
 
-// double[] array = CreateFillArray();
-// Console.WriteLine();
-// Console.WriteLine();
-// FindCount(array);
+double[] array = CreateFillArray();
+Console.WriteLine();
+Console.WriteLine();
+FindCount(array);
 
 
 
